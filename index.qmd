@@ -5,3 +5,23 @@ title: "funsite"
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+```{r}
+# 1. Set up a blank canvas
+plot(NULL, xlim=c(-2, 2), ylim=c(-2, 2), asp=1,
+     axes=FALSE, xlab="", ylab="", main="Base R Smiley Face")
+
+# 2. Draw the main head (yellow circle)
+symbols(0, 0, circles=1.5, bg="yellow", fg="black", inches=FALSE, add=TRUE, lwd=2)
+
+# 3. Draw the eyes (black filled circles)
+points(c(-0.5, 0.5), c(0.4, 0.4), pch=16, cex=3, col="black")
+
+# 4. Generate data points for a smooth curved smile
+smile_x <- seq(-0.7, 0.7, length.out=100)
+smile_y <- 0.8 * (smile_x^2) - 0.6  # Parabolic curve equation
+
+# 5. Draw the smile line
+lines(smile_x, smile_y, col="black", lwd=4)
+
+```
