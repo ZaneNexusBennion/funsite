@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "funsite",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n# 1. Set up a blank canvas\nplot(NULL, xlim=c(-2, 2), ylim=c(-2, 2), asp=1,\n     axes=FALSE, xlab=\"\", ylab=\"\", main=\"Base R Smiley Face\")\n\n# 2. Draw the main head (yellow circle)\nsymbols(0, 0, circles=1.5, bg=\"yellow\", fg=\"black\", inches=FALSE, add=TRUE, lwd=2)\n\n# 3. Draw the eyes (black filled circles)\npoints(c(-0.5, 0.5), c(0.4, 0.4), pch=16, cex=3, col=\"black\")\n\n# 4. Generate data points for a smooth curved smile\nsmile_x &lt;- seq(-0.7, 0.7, length.out=100)\nsmile_y &lt;- 0.8 * (smile_x^2) - 0.6  # Parabolic curve equation\n\n# 5. Draw the smile line\nlines(smile_x, smile_y, col=\"black\", lwd=4)"
   },
   {
     "objectID": "about.html",
